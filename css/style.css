@@ -1,3 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
 .container {
-    background-color: blueviolet;
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+
+.section {
+    margin: 10px 0;
+    background-color: white;
+}
+
+.section__header {
+    font-size: 20px;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.section__body {
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px;
+}
+
+.form__button {
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    margin: 10px;
+}
+
+.form__button:hover {
+    background-color: rgb(72, 196, 196);
+}
+
+.list {
+    list-style: none;
+    padding: 10px;
+}
+
+.list__item {
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0px 0px 0px;
+    grid-template-columns: auto 1fr auto;
+}
+
+.list__button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0px;
+    color: white;
+}
+
+.list__button--done {
+    background-color: green;
+}
+
+.list__button--done:hover {
+    background-color: rgb(57, 195, 57);
 }
