@@ -24,7 +24,7 @@ html {
     font-size: 20px;
     margin: 0;
     padding: 20px;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .section__body {
@@ -67,6 +67,7 @@ html {
     border: 1px solid #ddd;
     margin: 10px 0px 0px 0px;
     grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
 }
 
 .list__button {
@@ -83,4 +84,20 @@ html {
 
 .list__button--done:hover {
     background-color: rgb(57, 195, 57);
+}
+
+.list__content--done {
+    text-decoration: line-through;
+}
+
+.list__button--remove {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.list__button--remove:hover {
+    background-color: rgb(251, 97, 97);
 }
