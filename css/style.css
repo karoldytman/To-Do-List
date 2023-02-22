@@ -55,12 +55,12 @@ html {
     background-color: rgb(72, 196, 196);
 }
 
-.list {
+.tasks {
     list-style: none;
     padding: 10px;
 }
 
-.list__item {
+.tasks__item {
     display: grid;
     align-items: center;
     padding: 10px;
@@ -70,7 +70,7 @@ html {
     grid-gap: 10px;
 }
 
-.list__button {
+.tasks__button {
     width: 30px;
     height: 30px;
     border: none;
@@ -78,19 +78,19 @@ html {
     color: white;
 }
 
-.list__button--done {
+.tasks__button--done {
     background-color: green;
 }
 
-.list__button--done:hover {
+.tasks__button--done:hover {
     background-color: rgb(57, 195, 57);
 }
 
-.list__content--done {
+.task__content--done {
     text-decoration: line-through;
 }
 
-.list__button--remove {
+.tasks__button--remove {
     width: 30px;
     height: 30px;
     border: none;
@@ -98,6 +98,6 @@ html {
     color: white;
 }
 
-.list__button--remove:hover {
+.tasks__button--remove:hover {
     background-color: rgb(251, 97, 97);
 }
