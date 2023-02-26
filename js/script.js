@@ -1,23 +1,16 @@
 {
-    const tasks = [{
-            content: "zadanie 1",
-            done: false,
-        },
-        {
-            content: "zadanie 2",
-            done: true,
-        },
-    ];
+    const tasks = [];
+    let hideDoneTasks = false;
 
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <li${task.done ? "" : ""}>
-            <button class="js-done tasks__button--done">✔<?button> 
-            <button class="js-remove tasks__button--remove">🗑</button>
-            ${task.content}
+            <li class="tasks__item ${task.done & hideDoneTasks === true ? "tasks__button--done" : ""}">
+            <button class="js-done tasks__button tasks__button--done">${task.done ? "✔" : ""}</button>
+            <span class="tasks__Content ${task.done ? "task__content--done" : ""}" >${task.content}</span> 
+            <button class="js-remove tasks__button tasks__button--remove">🗑</button>
             </li>`;
         }
 
@@ -29,9 +22,20 @@
                 remuveTask(index);
             });
         });
-    };
+
+        const doneButtons = document.querySelectorAll(".js-done");
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                doneTask(index);
+            });
+        });
+    }
     const remuveTask = (index) => {
         tasks.splice(index, 1);
+        render();
+    }
+    const doneTask = (indexTask) => {
+        tasks[indexTask].done = !tasks[indexTask].done;
         render();
     }
 
@@ -50,7 +54,7 @@
 
         if (newTaskContent === "") {
             return;
-        }
+        };
 
         addnewTask(newTaskContent);
     };
