@@ -14,8 +14,8 @@ mark them as done and remove them from the list.
 
 #### Technologies used in the project
 
-    HTML
-    CSS
-    JavaScript
-    BEM
-    ES6
+   - HTML
+   - CSS
+   - JavaScript
+   - BEM
+   - ES6
