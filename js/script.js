@@ -19,7 +19,7 @@
         const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
-                remuveTask(index);
+                removeTask(index);
             });
         });
 
@@ -30,7 +30,7 @@
             });
         });
     }
-    const remuveTask = (index) => {
+    const removeTask = (index) => {
         tasks.splice(index, 1);
         render();
     }
@@ -50,13 +50,14 @@
     const oneFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value;
-
-        if (newTaskContent === "") {
-            return;
+        const newTaskContent = document.querySelector(".js-newTask");
+        const newTaskElement = newTaskContent.value;
+        if (newTaskElement !== "") {
+            addnewTask(newTaskElement);
+            newTaskContent.value = "";
         };
+        newTaskContent.focus();
 
-        addnewTask(newTaskContent);
     };
 
     const init = () => {
