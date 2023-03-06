@@ -2,7 +2,7 @@
     const tasks = [];
     let hideDoneTasks = false;
 
-    const render = () => {
+    const renderTask = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -15,6 +15,26 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const bindButtonsEvents = () => {
+
+
+        }
+
+        const renderButtons = () => {
+            let htmlButtonsString = "";
+
+            if (tasks.lenght > 0) {
+                htmlButtonsString += ~`
+        <button class="js-hideShow buttons__button hideShowButton">
+        ${hideDoneTask === false ? "Ukryj" : "Pokaż"} ukończone</button>
+        <button class="js-completeAll buttons__button completeAllButton"
+        ${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie
+        </button>`
+            }
+            document.querySelector("js-buttons").innerHTML = htmlButtonsString;
+
+        };
 
         const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButton, index) => {
@@ -60,9 +80,14 @@
 
     };
 
+    const render = () => {
+        renderTask();
+        renderButtons();
+        bindButtonsEvents();
+    };
+
     const init = () => {
         render();
-
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", oneFormSubmit);
