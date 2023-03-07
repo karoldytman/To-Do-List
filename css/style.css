@@ -103,3 +103,27 @@ html {
 .tasks__button--remove:hover {
     background-color: rgb(251, 97, 97);
 }
+
+.buttons__button {
+    margin: 0 0 0 20px;
+    border: none;
+    color: teal;
+    background-color: white;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.buttons__button:hover {
+    color: rgb(13, 107, 59);
+}
+
+@media (max-width:767px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.completeAllButton:disabled {
+    color: rgb(184, 179, 179)
+}
