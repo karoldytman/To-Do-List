@@ -8,23 +8,47 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    font-family: Montseratt, sans-serif;
+    background-color: #eee;
+    word-break: break-word;
+}
+
 .container {
-    max-width: 900px;
+    max-width: 700px;
     padding: 20px;
     margin: 0 auto;
     background-color: #ddd;
 }
 
 .section {
-    margin: 10px 0;
+    margin: 10px;
     background-color: white;
+    border: 1px solid #ddd;
+}
+
+.section__title {
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 15px;
 }
 
 .section__header {
-    font-size: 20px;
-    margin: 0;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 10px;
+    border-bottom: 1.5px solid #ddd;
+    margin-left: 15px;
+}
+
+@media (max-width:767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+        padding-bottom: 25px;
+        gap: 5px;
+    }
 }
 
 .section__body {
@@ -32,8 +56,12 @@ html {
 }
 
 .form {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    align-content: center;
+    padding: 15px;
+    background-color: white;
 }
 
 .form__input {
@@ -102,6 +130,12 @@ html {
 
 .tasks__button--remove:hover {
     background-color: rgb(251, 97, 97);
+}
+
+.section__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
 }
 
 .buttons__button {
