@@ -59,7 +59,7 @@
         });
     };
 
-    const renderTask = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -93,21 +93,28 @@
     const renderButtons = () => {
         let htmlButtonsString = "";
 
-        if (tasks.lenght > 0) {
+        if (tasks.length > 0) {
+
+
             htmlButtonsString += `
-        <button class="js-hideShow buttons__button hideShowButton">
-        ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone</button>
-        <button class="js-completeAll buttons__button completeAllButton"
-        ${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie
-        </button>`
+                <button class="js-hideShow buttons__button hideShowButton">
+                ${hideDoneTasks === false ? "Ukryj" : "Pokaż"} ukończone
+                </button>
+                <button class="js-completeAll buttons__button completeAllButton"
+                ${tasks.every(({ done }) => done) ? "disabled" : ""}
+                >
+                Ukończ wszystkie
+                </button>  
+                `
         }
+
         document.querySelector(".js-buttons").innerHTML = htmlButtonsString;
 
     };
 
 
     const render = () => {
-        renderTask();
+        renderTasks();
         bindEvents();
         renderButtons();
         bindButtonsEvents();
