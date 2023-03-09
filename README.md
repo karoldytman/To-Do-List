@@ -21,3 +21,4 @@ mark them as done and remove them from the list.
    - JavaScript
    - BEM
    - ES6
+   - Immutability
