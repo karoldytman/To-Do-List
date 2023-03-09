@@ -12,7 +12,7 @@ In this project I present an application that will facilitate everyday tasks
 The task list is mainly based on the JS language It allows you to add new tasks, 
 mark them as done and remove them from the list.
 
-<img src = https://github.com/karoldytman/task-list/blob/main/images/AnimationToDoTasks2.gif>
+<img src = https://github.com/karoldytman/task-list/blob/main/images/AnimationToDoTasks4.gif>
 
 #### Technologies used in the project
 
@@ -21,3 +21,4 @@ mark them as done and remove them from the list.
    - JavaScript
    - BEM
    - ES6
+   - Immutability
