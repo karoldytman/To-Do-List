@@ -1,6 +1,6 @@
 # To Do List
 
- <img src = https://github.com/karoldytman/task-list/blob/main/images/AnimationToDoTasks.gif>
+ <img src = https://github.com/karoldytman/task-list/blob/main/images/AnimationToDoTasks3.gif>
 
 ## Demo
 
