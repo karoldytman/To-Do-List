@@ -15,7 +15,7 @@
         render();
     };
 
-    const completeAllTaska = () => {
+    const completeAllTasks = () => {
         tasks = tasks.map((task) => ({...task, done: true }));
         render();
     };
@@ -64,7 +64,7 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="tasks__item ${task.done && hideDoneTasks === true ? "tasks__button--done" : ""}">
+            <li class="tasks__item ${task.done && hideDoneTasks === true ? "tasks__item--hiden" : ""}">
             <button class="js-done tasks__button tasks__button--done">${task.done ? "✔" : ""}</button>
             <span class="tasks__Content ${task.done ? "task__content--done" : ""}" >${task.content}</span> 
             <button class="js-remove tasks__button tasks__button--remove">🗑</button>
@@ -79,7 +79,7 @@
         const completeAllButton = document.querySelector(".js-completeAll");
 
         if (completeAllButton) {
-            completeAllButton.addEventListener("click", completeAllTaska)
+            completeAllButton.addEventListener("click", completeAllTasks)
         }
 
         const hideShowButton = document.querySelector(".js-hideShow");
