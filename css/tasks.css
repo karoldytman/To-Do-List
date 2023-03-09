@@ -1,0 +1,78 @@
+.tasks {
+    list-style: none;
+    padding: 10px;
+}
+
+.tasks__item {
+    display: grid;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 10px 0px 0px 0px;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+}
+
+.tasks__button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+.tasks__button--done {
+    background-color: green;
+    transition: 2s;
+}
+
+.tasks__button--done:hover {
+    background-color: rgb(57, 195, 57);
+}
+
+.task__content--done {
+    text-decoration: line-through;
+}
+
+.tasks__button--remove {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+    transition: 1s;
+}
+
+.tasks__button--remove:hover {
+    background-color: rgb(251, 97, 97);
+    transform: rotate(360deg);
+}
+
+.tasks__item--hiden {
+    display: none;
+}
+
+.buttons__button {
+    margin: 0 0 0 20px;
+    border: none;
+    color: teal;
+    background-color: white;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.buttons__button:hover {
+    color: rgb(47, 205, 70);
+}
+
+@media (max-width:767px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.completeAllButton:disabled {
+    color: rgb(203, 201, 201)
+}
